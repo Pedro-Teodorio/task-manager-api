@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "1c3108cb-5317-46f0-a13e-3f521ee99513",
+		"name": "Gerenciador de Tarefas API V1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44475982",
+		"_collection_link": "https://www.postman.com/pedroteodorio/workspace/api-todo/collection/44475982-1c3108cb-5317-46f0-a13e-3f521ee99513?action=share&source=collection_link&creator=44475982"
+	},
+	"item": [
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Listar Usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/usuarios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Usuário",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Pedro\",\n  \"email\": \"pedro@example.com\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usuarios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Usuário por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/usuarios/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuário",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Pedro T.\",\n  \"email\": \"pedro.t@example.com\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usuarios/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Usuário",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/usuarios/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Projetos de um Usuário",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/usuarios/1/projetos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios",
+								"1",
+								"projetos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projetos",
+			"item": [
+				{
+					"name": "Listar Projetos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/projetos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"projetos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Projeto para Usuário",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Projeto X\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/projetos/usuario/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"projetos",
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Projeto por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/projetos/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"projetos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Projeto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Projeto X Atualizado\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/projetos/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"projetos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Projeto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/projetos/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"projetos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tarefas",
+			"item": [
+				{
+					"name": "Listar Tarefas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tarefas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tarefas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Tarefa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Tarefa A\",\n  \"status\": \"PENDENTE\",\n  \"projetoId\": 1,\n  \"usuariosIds\": [1]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tarefas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tarefas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Tarefa por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tarefas/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tarefas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Tarefa",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Tarefa A Atualizada\",\n  \"status\": \"EM_ANDAMENTO\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tarefas/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tarefas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Tarefa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tarefas/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tarefas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tarefas/status/PENDENTE",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tarefas",
+								"status",
+								"PENDENTE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por Usuário",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tarefas/usuario/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tarefas",
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por Projeto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tarefas/projeto/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tarefas",
+								"projeto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuários da Tarefa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tarefas/1/usuarios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tarefas",
+								"1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atribuir Usuário à Tarefa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tarefas/1/usuarios/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tarefas",
+								"1",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Status da Tarefa",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"CONCLUIDA\""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tarefas/1/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tarefas",
+								"1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080/api/v1"
+		}
+	]
+}
