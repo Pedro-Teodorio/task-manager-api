@@ -91,12 +91,8 @@ Oferece duas versões de contrato:
    ```
 
 4. Acesse
-    - API v1:  `http://localhost:8080/api/v1/...`
-    - API v2:  `http://localhost:8080/api/v2/...`
     - Swagger-UI:  
-      `http://localhost:8080/swagger-ui` (seletor de versão no topo)
-    - OpenAPI v1: `/openapi/v1`
-    - OpenAPI v2: `/openapi/v2.json`
+      `http://localhost:8080/swagger`
 
 ---
 
