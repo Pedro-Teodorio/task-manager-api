@@ -148,8 +148,8 @@ Abra `http://localhost:8080/swagger` para acessar a documentação interativa.
 
 | Ação                           | Link                                                                                                | Descrição                          |
 |--------------------------------|-----------------------------------------------------------------------------------------------------|------------------------------------|
-| Download Collection Postman V1 | [Baixar Collection do Postman](./src/main/resources/collections/Gerenciador de Tarefas API V1.json) | Collection para testar a V1 da API |
-| Download Collection Postman V2 | [Baixar Collection do Postman](./src/main/resources/collections/Gerenciador de Tarefas API V2.json)     | Collection para testar a V1 da API |
+| Download Collection Postman V1 | [Baixar Collection do Postman](./src/main/resources/collections/Gerenciador%20de%20Tarefas%20API%20V1.json) | Collection para testar a V1 da API |
+| Download Collection Postman V2 | [Baixar Collection do Postman](./src/main/resources/collections/Gerenciador%20de%20Tarefas%20API%20V2.json)     | Collection para testar a V2 da API |
 
 
 ---
